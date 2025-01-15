@@ -1,5 +1,103 @@
 # 90North
 Developed code for 90North is available here
+                              ****** TASK1******
+                              FRONTEND DEVELOPMENT
+  This is a responsive webpage featuring a fixed navbar, collapsible left menu, main content area, right-side panel, and footer. The layout adjusts based on screen size to provide an optimal user experience.
+
+**Features**
+
+Fixed Navbar:
+
+Stays at the top of the page during scrolling.
+
+Three Content Sections Below the Navbar:
+
+Left Menu: Collapsible menu for navigation or additional content.
+
+Main Content Area: The central area for displaying primary information.
+
+Right Side Panel: For supplementary information or tools.
+
+Footer:
+
+Fixed at the bottom of the page, displaying site-wide information.
+
+**Responsive Design:**
+
+Adjusts layout and scaling for different screen sizes using CSS and JavaScript.
+
+**Customizable Scaling:**
+
+JavaScript dynamically scales the webpage based on screen width:
+
+992px to 1600px: Shrinks to 90%.
+
+700px to 767px: Shrinks to 80%.
+
+600px to 700px: Shrinks to 75%.
+
+Less than 600px: Shrinks to 50%.
+
+**Folder Structure**
+
+responsive-webpage/
+├── index.html      # Main HTML file
+├── styles.css      # Inline styling is included in HTML for this example
+└── app.js          # JavaScript included within the HTML
+
+**Prerequisites**
+
+Ensure you have a modern web browser to run this project. No additional software or tools are required.
+
+**Usage**
+
+Clone the repository:
+
+git clone https://github.com/your-username/responsive-webpage.git
+cd responsive-webpage
+
+Open index.html in your browser:
+
+Open the file in a web browser or serve it using a local web server (e.g., Live Server in VS Code).
+
+Interact with the webpage:
+
+Use the toggle button in the left menu to collapse or expand the menu.
+
+Resize the browser window to see the scaling adjustments.
+
+How It Works**
+**
+HTML Structure:
+
+Navbar, container, and footer sections are defined using semantic tags.
+
+CSS Styling:
+
+Flexbox ensures responsive layout for the left menu, main content, and right panel.
+
+Media queries hide the left menu on small screens.
+
+JavaScript Functions:
+
+toggleMenu: Toggles the visibility of the left menu.
+
+adjustPageWidth: Dynamically scales the webpage based on the screen width.
+
+**Customization**
+
+Adjust Scaling Thresholds:
+Modify the adjustPageWidth function to change scaling behavior.
+
+Styling:
+Update styles directly in the <style> section or move them to an external styles.css file for modularity.
+
+Left Menu Content:
+Replace the placeholder text in .menu-content with navigation links or other components.
+
+
+
+                                    ****TASK2****
 
 **Chat Application**
 This is a real-time chat application built with Node.js, Express, Socket.IO, and MongoDB on the backend, and plain HTML, CSS, and JavaScript on the frontend. The application allows users to sign up, log in, and chat with other registered users in real-time.
