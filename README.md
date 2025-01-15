@@ -1,7 +1,10 @@
 # 90North
 Developed code for 90North is available here
+
                               ****** TASK1******
+                              
                               FRONTEND DEVELOPMENT
+                              
   This is a responsive webpage featuring a fixed navbar, collapsible left menu, main content area, right-side panel, and footer. The layout adjusts based on screen size to provide an optimal user experience.
 
 **Features**
@@ -38,12 +41,6 @@ JavaScript dynamically scales the webpage based on screen width:
 
 Less than 600px: Shrinks to 50%.
 
-**Folder Structure**
-
-responsive-webpage/
-├── index.html      # Main HTML file
-├── styles.css      # Inline styling is included in HTML for this example
-└── app.js          # JavaScript included within the HTML
 
 **Prerequisites**
 
