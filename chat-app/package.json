@@ -1,0 +1,34 @@
+{
+    "name": "chat-app",
+    "version": "1.0.0",
+    "description": "A real-time chat application with user authentication and WebSocket integration.",
+    "main": "server.js",
+    "scripts": {
+      "start": "node backend/server.js",
+      "dev": "nodemon backend/server.js"
+    },
+    "keywords": [
+      "chat",
+      "real-time",
+      "WebSocket",
+      "Node.js",
+      "MongoDB"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "dependencies": {
+      "bcryptjs": "^2.4.3",
+      "body-parser": "^1.20.2",
+      "cors": "^2.8.5",
+      "date-fns": "^2.30.0",
+      "dotenv": "^16.1.4",
+      "express": "^4.18.2",
+      "jsonwebtoken": "^9.0.0",
+      "mongoose": "^7.5.2",
+      "socket.io": "^4.6.2"
+    },
+    "devDependencies": {
+      "nodemon": "^3.0.1"
+    }
+  }
+  
