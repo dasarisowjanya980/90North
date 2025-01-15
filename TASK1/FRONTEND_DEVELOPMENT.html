@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            z-index: 1000;
+        }
+
+        .container {
+            display: flex;
+            margin-top: 50px;
+            padding: 10px;
+        }
+
+        .left-menu {
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .right-panel {
+            width: 20%;
+            background-color: #f9f9f9;
+            padding: 10px;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .collapse {
+            display: none;
+        }
+
+        .toggle-btn {
+            display: inline-block;
+            background-color: #555;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .left-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        Fixed Navbar
+    </div>
+
+    <div class="container">
+        <div class="left-menu">
+            <div class="toggle-btn" onclick="toggleMenu()">Toggle Menu</div>
+            <div class="menu-content">
+                Left Menu Content
+            </div>
+        </div>
+
+        <div class="main-content">
+            Main Content 
+        </div>
+
+        <div class="right-panel">
+            Right Side Panel
+        </div>
+    </div>
+
+    <div class="footer">
+        Footer 
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu-content');
+            if (menu.classList.contains('collapse')) {
+                menu.classList.remove('collapse');
+            } else {
+                menu.classList.add('collapse');
+            }
+        }
+
+        function adjustPageWidth() {
+            const screenWidth = window.innerWidth;
+            const container = document.querySelector('.container');
+            
+            if (screenWidth >= 992 && screenWidth <= 1600) {
+                container.style.transform = 'scale(0.9)';
+            } else if (screenWidth >= 700 && screenWidth <= 767) {
+                container.style.transform = 'scale(0.8)';
+            } else if (screenWidth >= 600 && screenWidth < 700) {
+                container.style.transform = 'scale(0.75)';
+            } else if (screenWidth <= 600) {
+                container.style.transform = 'scale(0.5)';
+            } else {
+                container.style.transform = 'scale(1)';
+            }
+        }
+
+        window.addEventListener('resize', adjustPageWidth);
+        window.addEventListener('load', adjustPageWidth);
+    </script>
+</body>
+</html>
